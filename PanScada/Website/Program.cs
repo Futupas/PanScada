@@ -11,7 +11,7 @@ namespace Website
     {
         static void Main(string[] args)
         {
-            Website website1 = new Website(@"http://localhost:5501/", Request);
+            Website website1 = new Website(@"http://192.168.0.111:80/", Request);
             website1.Start();
             Console.ReadLine();
             website1.Stop();

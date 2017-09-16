@@ -52,9 +52,13 @@ namespace PanScada
         {
             public int ID;
             public int TypeID;
-            public float? Value;
             public int DeviceID;
 
+        }
+        public class SignalValueModel
+        {
+            public int SignalID;
+            public float? Value;
         }
         public class DeviceModel
         {
@@ -65,9 +69,10 @@ namespace PanScada
         static public List<ElementSVGModel> ElementSVG; // It will not change
         static public List<ElementTypeModel> ElementType; // It will not change
         static public List<ElementModel> Element; // It will change (MnemoEditor)
-        static public List<MnemoModel> Mnemo; // It will not (MnemoEditor)
+        static public List<MnemoModel> Mnemo; // It will change (MnemoEditor)
         static public List<SignalTypeModel> SignalType; // It will not change
-        static public List<SignalModel> Signal; // It will change (Agent)
+        static public List<SignalModel> Signal; // It will not change
+        static public List<SignalValueModel> SignalValue; // It will change (Agent). Only dynamic
         static public List<DeviceModel> Device; // It will not change
     }
 }
